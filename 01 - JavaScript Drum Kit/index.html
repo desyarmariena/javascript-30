@@ -60,12 +60,22 @@
     
 <script>
 window.addEventListener('keydown', function(e){
+    function removeTransition(e){
+        //if(e.propertyName !== 'transform') return;        
+        this.classList.remove('playing');
+    }
+
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);    
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
     if(!audio) return; // keluar dari function jika key lain yang ditekan
     
     audio.currentTime = 0;
     audio.play();
+    key.classList.add('playing');
+
+    const keys = document.querySelectorAll('.key') // listen to all key
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 });
 </script>
 </body>

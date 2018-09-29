@@ -19,7 +19,7 @@ html {
     justify-content: center; /* tengah horizontal */
 }
 .key {
-    border: .4rem solid black;
+    border: .4rem solid rgba(0,0,0,0.4);
     border-radius: .5rem;
     margin: 1rem;
     font-size: 1.5rem;
@@ -44,6 +44,6 @@ kbd {
 /* efek box membesar */
 .playing {
     transform: scale(1.1);
-    boder-color: #ffc600;
+    border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
 }
