@@ -35,4 +35,7 @@ body {
     background: black;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg); /* agar dimulai dari jam 12 */
+    transition: all .05s;
 }
