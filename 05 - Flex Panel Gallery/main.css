@@ -54,13 +54,15 @@ body {
     transition: transform 0.5s;
     flex: 1 0 auto;
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: center;
     align-items: center;
 }
 
 .panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
 .panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
 
 .panel p {
     text-transform: uppercase;
@@ -74,5 +76,6 @@ body {
 }
 
 .panel.open {
+    flex: 5;
     font-size: 40px;
 }
