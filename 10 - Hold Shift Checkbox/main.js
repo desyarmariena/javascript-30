@@ -18,9 +18,7 @@ function handleCheck(e) {
                 checkbox.checked = true;
             }
         });
-
     }
-
 
     lastChecked = this;
 }
